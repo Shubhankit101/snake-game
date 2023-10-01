@@ -88,7 +88,37 @@ function drawSnake(){
         context.strokeRect(snakePart.x, snakePart.y, unitSize, unitSize);
     })
 };
-function changeDirection(){};
+function changeDirection(event){
+    const keyPressed = event.KeyCode;
+    const LEFT = 37;
+    const UP = 38;
+    const RIGHT = 39;
+    const DOWN = 40;
+
+    const goingUP = (yVeloctiy == -unitSize);
+    const goingDOWN = (yVeloctiy == unitSize);
+    const goingLEFT = (yVeloctiy == -unitSize);
+    const goingRIGHT = (yVeloctiy == unitSize);
+
+    switch(true){
+        case(keyPressed == LEFT && !goingRIGHT):
+            xSpeed = -unitSize;
+            ySpeed = 0;
+            break;
+        case(keyPressed == UP && !goingDOWN):
+            xSpeed = 0;
+            ySpeed = -unitSize;
+            break;
+        case(keyPressed == RIGHT && !goingLEFT):
+            xSpeed = unitSize;
+            ySpeed = 0;
+            break;
+        case(keyPressed == DOWN && !goingUP):
+            xSpeed = 0;
+            ySpeed = unitSize;
+            break;   
+    }
+};
 function checkGameOver(){};
 function displayGameOver(){};
 function resetGame(){};
