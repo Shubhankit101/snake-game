@@ -20,7 +20,7 @@ let snake = [
     {x:unitSize * 4, y:0},
     {x:unitSize * 3, y:0},
     {x:unitSize * 2, y:0},
-    {x:unitSize, y:0},
+    {x:unitSize, y:0},  
     {x:0, y:0}
 ];
 window.addEventListener('keydown', changeDirection);
@@ -95,10 +95,10 @@ function changeDirection(event){
     const RIGHT = 39;
     const DOWN = 40;
 
-    const goingUP = (yVeloctiy == -unitSize);
-    const goingDOWN = (yVeloctiy == unitSize);
-    const goingLEFT = (yVeloctiy == -unitSize);
-    const goingRIGHT = (yVeloctiy == unitSize);
+    const goingUP = (ySpeed == -unitSize);
+    const goingDOWN = (ySpeed == unitSize);
+    const goingLEFT = (xSpeed == -unitSize);
+    const goingRIGHT = (ySpeed == unitSize);
 
     switch(true){
         case(keyPressed == LEFT && !goingRIGHT):
