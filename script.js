@@ -66,7 +66,20 @@ function drawFood(){
     context.fillStyle = foodColor;
     context.fillRect(foodX, foodY, unitSize, unitSize);
 };
-function moveSnake(){};
+function moveSnake(){
+    const head = {x: snake[0].x + xSpeed, y: snake[0].y + ySpeed}
+    //For moving the snake 
+    snake.unshift(head); 
+    //Food is eaten
+    if(snake[0].x == foodX && snake[0].y == foodY){
+        score+=1;
+        scoreText.textContent = totalScore;
+        createFood();
+    }
+    else{
+        snake.pop();
+    }
+};
 function drawSnake(){
     context.fillStyle = snakeColor;
     context.strokeStyle = snakeBorder;
