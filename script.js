@@ -49,7 +49,10 @@ function nextTrick() {
     else
         displayGameOver();
 };
-function clearBoard() {};
+function clearBoard() {
+    context.fillStyle = boardBackground;
+    context.fillRect(0, 0 ,gameWidth, gameHeight); 
+};
 function createFood(){
     function randomFood(min, max){
         //Every number created is divisible by 25
@@ -64,7 +67,14 @@ function drawFood(){
     context.fillRect(foodX, foodY, unitSize, unitSize);
 };
 function moveSnake(){};
-function drawSnake(){};
+function drawSnake(){
+    context.fillStyle = snakeColor;
+    context.strokeStyle = snakeBorder;
+    snake.forEach(snakePart =>{
+        context.fillRect(snakePart.x, snakePart.y, unitSize, unitSize);
+        context.strokeRect(snakePart.x, snakePart.y, unitSize, unitSize);
+    })
+};
 function changeDirection(){};
 function checkGameOver(){};
 function displayGameOver(){};
