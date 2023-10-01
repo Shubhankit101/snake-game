@@ -19,5 +19,11 @@
     cursor: pointer;
 }
 body{
-    background-color: rgb(119, 119, 119)
+    background-color: rgb(128, 128, 128)
+}
+
+header > h1{
+    color: black;
+    text-align: center;
+    font-family: 'Press Start 2P', sans-serif;  
 }

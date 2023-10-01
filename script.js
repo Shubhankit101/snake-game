@@ -143,7 +143,7 @@ function checkGameOver(){
     }
 };
 function displayGameOver(){
-    context.font = `Press Start 2P', sans-serif`;
+    context.font = 'Press Start 2P';
     context.fillStyle = 'black';
     context.textAlign = 'center';
     context.fillText('Game Over!', gameWidth / 2, gameHeight / 2);
