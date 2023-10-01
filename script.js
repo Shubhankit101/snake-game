@@ -5,9 +5,9 @@ const resetButton = document.getElementById('resetButton');
 const gameWidth = gameBoard.width;
 const gameHeight = gameBoard.height;
 const boardBackground ='white';
-const snakeColor = 'blue';
+const snakeColor = '#5e98f6';
 const snakeBorder = 'black';
-const foodColor = 'red';
+const foodColor = 'lightGreen';
 const unitSize = 25;
 let running = false;
 let xSpeed = unitSize;
@@ -148,7 +148,7 @@ function checkGameOver(){
     }
 };
 function displayGameOver(){
-    context.font = 'Press Start 2P';
+    context.font = "Press Start 2P, sans-serif";
     context.fillStyle = 'black';
     context.textAlign = 'center';
     context.fillText('Game Over!', gameWidth / 2, gameHeight / 2);
