@@ -28,12 +28,42 @@ resetButton.addEventListener('click', resetGame)
 
 gameStart();
 
-function gameStart(){};
-function nextTrick() {};
+function gameStart(){
+    running=true;
+    scoreText.textContent = totalScore;
+    createFood();
+    drawFood();
+    nextTrick();
+};
+function nextTrick() {
+    if(running){
+        setTimeout(()=>{
+            clearBoard();
+            drawFood();
+            moveSnake();
+            drawSnake();
+            checkGameOver();
+            nextTrick();
+        }, 80);
+    }
+    else
+        displayGameOver();
+};
 function clearBoard() {};
-function createBoard(){};
-function drawFood(){};
-function moceSnake(){};
+function createFood(){
+    function randomFood(min, max){
+        //Every number created is divisible by 25
+        const randNum = Math.round((Math.random() * (max - min) + min) / unitSize) * unitSize;
+        return randNum;
+    }
+    foodX = randomFood(0, gameWidth - unitSize);
+    foodY = randomFood(0, gameWidth - unitSize);
+};
+function drawFood(){
+    context.fillStyle = foodColor;
+    context.fillRect(foodX, foodY, unitSize, unitSize);
+};
+function moveSnake(){};
 function drawSnake(){};
 function changeDirection(){};
 function checkGameOver(){};
