@@ -89,7 +89,8 @@ function drawSnake(){
     })
 };
 function changeDirection(event){
-    const keyPressed = event.KeyCode;
+    const keyPressed = event.keyCode;
+    console.log(keyPressed);
     const LEFT = 37;
     const UP = 38;
     const RIGHT = 39;
@@ -98,7 +99,7 @@ function changeDirection(event){
     const goingUP = (ySpeed == -unitSize);
     const goingDOWN = (ySpeed == unitSize);
     const goingLEFT = (xSpeed == -unitSize);
-    const goingRIGHT = (ySpeed == unitSize);
+    const goingRIGHT = (xSpeed == unitSize);
 
     switch(true){
         case(keyPressed == LEFT && !goingRIGHT):
