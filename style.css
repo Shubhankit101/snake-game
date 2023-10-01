@@ -22,7 +22,7 @@ body{
     background-color: rgb(128, 128, 128)
 }
 
-header > h1{
+header > h2{
     color: black;
     text-align: center;
     font-family: 'Press Start 2P', sans-serif;  

@@ -90,11 +90,16 @@ function drawSnake(){
 };
 function changeDirection(event){
     const keyPressed = event.keyCode;
-    console.log(keyPressed);
+    //For Arrows Key Scehme
     const LEFT = 37;
     const UP = 38;
     const RIGHT = 39;
     const DOWN = 40;
+    //For WASD Key Scheme
+    const leftKey = 65;
+    const rightKey = 68;
+    const upKey = 87;
+    const downKey = 83;
 
     const goingUP = (ySpeed == -unitSize);
     const goingDOWN = (ySpeed == unitSize);
@@ -102,19 +107,19 @@ function changeDirection(event){
     const goingRIGHT = (xSpeed == unitSize);
 
     switch(true){
-        case(keyPressed == LEFT && !goingRIGHT):
+        case((keyPressed == LEFT || keyPressed == leftKey) && !goingRIGHT):
             xSpeed = -unitSize;
             ySpeed = 0;
             break;
-        case(keyPressed == UP && !goingDOWN):
+        case((keyPressed == UP || keyPressed == upKey)&& !goingDOWN):
             xSpeed = 0;
             ySpeed = -unitSize;
             break;
-        case(keyPressed == RIGHT && !goingLEFT):
+        case((keyPressed == RIGHT || keyPressed == rightKey) && !goingLEFT):
             xSpeed = unitSize;
             ySpeed = 0;
             break;
-        case(keyPressed == DOWN && !goingUP):
+        case((keyPressed == DOWN || keyPressed == downKey) && !goingUP):
             xSpeed = 0;
             ySpeed = unitSize;
             break;   
