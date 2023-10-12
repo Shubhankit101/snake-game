@@ -2,10 +2,13 @@ const gameBoard = document.getElementById('gameBoard');
 const context = gameBoard.getContext('2d');
 const scoreText = document.getElementById('score');
 const resetButton = document.getElementById('resetButton');
+const red = document.getElementById('red');
+const blue = document.getElementById('blue');
+const yellow = document.getElementById('yellow');
 const gameWidth = gameBoard.width;
 const gameHeight = gameBoard.height;
 const boardBackground ='white';
-const snakeColor = '#5e98f6';
+let snakeColor = '#5e98f6';
 const snakeBorder = 'black';
 const foodColor = 'lightGreen';
 const unitSize = 25;
@@ -23,8 +26,24 @@ let snake = [
     {x:unitSize, y:0},  
     {x:0, y:0}
 ];
+red.addEventListener('click', changeRedColor);
+blue.addEventListener('click', changeBlueColor);
+yellow.addEventListener('click', changeYellowColor)
+
+
+
+function changeBlueColor(){
+    snakeColor = '#0000ff';
+};
+function changeRedColor(){
+    snakeColor = '#ff0000';
+};
+function changeYellowColor(){
+    snakeColor = '#ffff00';
+};
+
 window.addEventListener('keydown', changeDirection);
-resetButton.addEventListener('click', resetGame)
+resetButton.addEventListener('click', resetGame);
 
 gameStart();
 

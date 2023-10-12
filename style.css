@@ -24,6 +24,31 @@
 body{
     background-color: rgb(128, 128, 128)
 }
+#red{
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 22px;
+    width: 175px;
+    border: 4px solid;
+    position:absolute; top: 50px; right: auto;
+    background-color: #ff0000;
+}
+#blue{
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 22px;
+    width: 175px;
+    border: 4px solid;
+    position:absolute; top: 100px; right: auto;
+    background-color: #0000ff;
+}
+#yellow{
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 22px;
+    width: 175px;
+    border: 4px solid;
+    position:absolute; top: 150px; right: auto;
+    background-color: yellow;
+}
+
 
 header > h2{
     color: black;
