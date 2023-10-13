@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+*{
+    margin: 0;
+}
 #gameContainer{
     text-align: center;
 }
@@ -46,7 +49,7 @@ body{
     width: 175px;
     border: 4px solid;
     position:absolute; top: 150px; right: auto;
-    background-color: yellow;
+    background-color: #ffff00;
 }
 
 
